@@ -296,3 +296,9 @@ header {
   border-radius: 5px; /* округлось бегунка */
   border: 1px solid #bcbcbc;
 }
+
+@media screen and (max-width: 650px) {
+  .popup {
+    left: -250%;
+  }
+}
