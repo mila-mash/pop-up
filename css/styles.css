@@ -1,0 +1,298 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------------------*/
+
+body {
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 16px;
+  color: rgb(28, 26, 26);
+  background-image: url(/img/bcg.webp);
+}
+a {
+  color: rgb(28, 26, 26);
+}
+
+.wrapper {
+  height: 100%;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.523);
+  height: 100px;
+  box-shadow: 0 10px 5px rgba(28, 26, 26, 0.1);
+}
+
+.nav {
+  height: 100%;
+  width: 100%;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 35px;
+}
+
+.menu__item {
+  margin-right: 25px;
+  height: 30px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__link img {
+  height: 30px;
+  width: auto;
+}
+
+.menu__link {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.for__popup {
+  position: relative;
+}
+
+.menu__link:hover {
+  border-radius: 5%;
+  border: solid 1px #757575;
+}
+
+.menu__link:focus {
+  border-radius: 5%;
+  border: solid 2px #757575;
+  background-color: rgba(255, 255, 255, 0.523);
+}
+
+.user__photo img {
+  height: 60px;
+  border-radius: 50%;
+}
+
+.checkbox__button {
+  cursor: pointer;
+}
+
+.checkbox__checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+/*----------------------*/
+
+.popup {
+  position: absolute;
+  left: -450%;
+  top: 250%;
+  background-color: rgba(255, 255, 255, 0.523);
+  border: solid 2px #757575;
+  width: 350px;
+  height: 250px;
+  overflow-y: scroll;
+  box-shadow: 10px 10px 5px rgba(28, 26, 26, 0.1);
+}
+
+.popup__menu {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.popup__element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 5px;
+  height: 55px;
+}
+
+.popup__link img {
+  height: 50px;
+}
+
+.popup__link {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.popup__link:hover {
+  border-radius: 5%;
+  border: solid 1px #757575;
+}
+
+.popup__link:focus {
+  border-radius: 5%;
+  border: solid 2px #757575;
+  background-color: rgba(255, 255, 255, 0.523);
+}
+
+.popup_text {
+  display: block;
+  margin-top: 5px;
+}
+/*-------*/
+
+.more {
+  cursor: pointer;
+  display: block;
+  background-color: #bcbcbc9f;
+  height: 30px;
+  display: block;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.more:hover {
+  border-radius: 5%;
+  border: solid 1px #757575;
+}
+
+.more:focus {
+  border-radius: 5%;
+  border: solid 2px #757575;
+  background-color: rgba(255, 255, 255, 0.523);
+}
+
+.more_checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.even__more {
+  cursor: pointer;
+  text-align: center;
+  background-color: #bcbcbc9f;
+  height: 30px;
+  padding-top: 7px;
+}
+
+.even__more:hover {
+  border-radius: 5%;
+  border: solid 1px #757575;
+}
+
+.even__more:focus {
+  border-radius: 5%;
+  border: solid 2px #757575;
+  background-color: rgba(255, 255, 255, 0.523);
+}
+
+/*------*/
+
+.popup {
+  display: none;
+}
+
+.checkbox__checkbox:checked ~ .popup {
+  display: inline;
+}
+
+.wrapper__popup {
+  display: none;
+}
+
+.more_checkbox:checked ~ .more {
+  display: none;
+}
+
+.more_checkbox:checked ~ .wrapper__popup {
+  display: inline;
+}
+
+/* прокрутка */
+::-webkit-scrollbar {
+  width: 10px; /* ширина всей полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0); /* цвет зоны отслеживания */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bcbcbc9f; /* цвет бегунка */
+  border-radius: 5px; /* округлось бегунка */
+  border: 1px solid #bcbcbc;
+}
